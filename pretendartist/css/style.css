@@ -1,0 +1,77 @@
+body{
+  background-color: black;
+}
+#container{
+  margin-left: 100px;
+  margin-top: 100px;
+  float:left;
+  width:60%
+}
+
+#sliders{
+
+margin-top: 200px;
+  float:right;
+  width: 30%
+
+}
+
+#heading{
+  text-align: center;
+  font-size: 80px;
+  font-family: "Blackadder ITC";
+  color: rgb(28, 134, 238);
+  text-shadow: lightblue 1.5px 0 1.5px;
+}
+
+
+#bb{
+  font-family: "Blackadder ITC";
+  color:black;
+}
+span{
+font-size: 10px;
+font-family: "Blackadder ITC";
+color: rgb(28, 134, 238);
+text-shadow: lightblue 1.5px 0 1.5px;
+}
+#posi{
+  position: relative;
+  width:400px;
+  height:300px;
+  padding: 20px;
+}
+
+#posi #round1{
+  position: absolute;
+  left:200px;
+top:170px;
+}
+
+
+button {
+  /* left:100px;
+  top:80px; */
+  cursor: pointer;
+  color: white;
+  /* padding: 16px 32px; */
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  /* margin: 4px 2px; */
+  transition-duration: 0.3s;
+
+}
+
+ #round1{
+  position: absolute;
+  background-color:rgb(28, 134, 238);
+  color: black;
+  border: 2px solid rgb(28, 134, 238);
+  border-radius: 10px;
+}
+
+ #round1:hover {
+  background-color: white;
+  color: darkblue;
+}
