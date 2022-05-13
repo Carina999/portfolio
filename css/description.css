@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background-color: black;
+  font-family: "Verdana";
+  margin-right: 3rem;
+}
+:root {
+  --main-radius: 1rem;
+  /* 圆角 */
+}
+.container {
+  display: grid;
+  height: 98vh;
+  grid-template-columns: 12rem 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.1fr;
+  grid-template-areas: "nav nav nav nav nav"
+      "side_bar content1 content2 content5 content6"
+      "side_bar content3 content4 content7 content8"
+      "side_bar content9 content10 content13 content14"
+      "side_bar content11 content12 content15 content16"
+      "footerl footerl footerl footerl footerr";
+  grid-gap: 0.5rem;
+  /* font-weight: 800; */
+  /* font-size: 2rem; 删掉 */
+
+}
+
+
+nav {
+  background-color: none;
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  text-align: center;
+  font: 800 30px 'Verdana';
+  color: #fff;
+  padding:10px;
+}
+
+.side_bar {
+  grid-area: side_bar;
+  border-radius: var(--main-radius);
+}
+
+.protect {
+  width: 100px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* transparent */
+  background-color: none;
+  transition: 0.5s;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  top: 69px;
+  z-index: 10;
+}
+
+.box {
+  text-decoration: none;
+  /* display: block; */
+  /* 高度 */
+  height: 15%;
+  width: 95%;
+  border-radius: 20px;
+  /* position: relative; */
+  transition: 0.5s;
+  /* 改颜色 */
+  color: #6d72ce;
+}
+
+.box ion-icon {
+  font-size: 60px;
+  position: absolute;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.box span {
+  position: relative;
+  top: 2rem;
+  left: 5.5rem;
+  font: 500 22px 'Verdana';
+  opacity: 0;
+}
+
+/* 闪 */
+#start {
+  color: #6d72ce;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+
+  25%,
+  75% {
+      color: rgb(230, 229, 244);
+  }
+}
+
+.protect:hover {
+  width: 210px;
+}
+
+.box:hover {
+  /* background-color: rgba(246, 245, 245, 0.3); */
+  border-radius: 100px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(158, 145, 245, 0.9)
+}
+
+.protect:hover span {
+  opacity: 1;
+}
+
+
+
+/* ----------------------------------------------------------- */
+/* .text {} */
+
+.card {
+  background-color: pink;
+  border-radius: var(--main-radius);
+}
+
+/*选择container下的子元素*/
+.card {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  /* padding-top: 3rem; */
+}
+
+.same {
+  color: aqua;
+}
+
+#content1 {
+  /* background-color: aliceblue; */
+  grid-area: content1;
+}
+
+#content2 {
+  grid-area: content2;
+}
+
+#content3 {
+  grid-area: content3;
+}
+
+#content4 {
+  grid-area: content4;
+}
+
+#content5 {
+  grid-area: content5;
+}
+
+#content6 {
+  grid-area: content6;
+}
+
+#content7 {
+  grid-area: content7;
+}
+
+#content8 {
+  grid-area: content8;
+}
+
+#content9 {
+  grid-area: content9;
+}
+
+#content10 {
+  grid-area: content10;
+}
+
+#content11 {
+  grid-area: content11;
+}
+
+#content12 {
+  grid-area: content12;
+}
+
+#content13 {
+  grid-area: content13;
+}
+
+#content14 {
+  grid-area: content14;
+}
+
+#content15 {
+  grid-area: content15;
+}
+
+#content16 {
+  grid-area: content16;
+}
+
+
+
+#footerl {
+ background-color: none;
+  /* background-color: aquamarine; */
+  grid-area: footerl;
+  color: #fff;
+  text-align: left;
+  padding-left: 3rem;
+  }
+#footerr {
+  background-color: none;
+  grid-area: footerr;
+  color: #fff;
+  text-align: right;
+  padding-right: 3rem;
+}
+
+
+
+/* 断点 phone */
+@media only screen and (max-width:50rem) {
+  body {
+      background-color: black;
+      font-family: "Verdana";
+      margin-right: 2rem;
+      margin-left: 2rem;
+  }
+  .container {
+      display: grid;
+      height: 80em;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.03fr 0.35fr 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr 0.1fr;
+
+      grid-template-areas: "nav nav"
+          "side_bar side_bar"
+          "content1 content2 "
+          "content3 content4 "
+          "content5 content6"
+          "content7 content8"
+          "content9 content10"
+          "content11 content12 "
+          "content13 content14"
+          "content15 content16"
+          "footerl footerr";
+      grid-gap: 0.5rem;
+      font-weight: 400;
+      /* font-size: 1rem; 删掉 */
+      text-align: center;
+  }
+
+  .side_bar {
+      grid-area: side_bar;
+      border-radius: var(--main-radius);
+  }
+
+  .protect {
+      width: 90vw;
+      height: 10vh;
+      display: flex;
+      /* flex-direction: column;
+      align-items: center; */
+      flex-direction: row;
+      justify-content: center;
+      /* transparent */
+      background-color: none;
+      transition: 0.5s;
+      overflow: hidden;
+      position: absolute;
+      /* left: 100px; */
+      z-index: 10;
+  }
+
+  .box {
+      text-decoration: none;
+      display: block;
+      /* 高度 */
+      height: 95%;
+      width: 15%;
+      border-radius: 20px;
+      /* position: relative; */
+      transition: 0.5s;
+      /* 改颜色 */
+      color: #6d72ce;
+  }
+
+  .box ion-icon {
+      font-size: 40px;
+      position: absolute;
+      padding-left: 1rem;
+      padding-top: 1rem;
+  }
+
+  .box span {
+      position: relative;
+      top: 4rem;
+      left: 0.5rem;
+      font: 500 18px 'Verdana';
+      opacity: 0;
+  }
+
+  /* 闪 */
+  #start {
+      color: #6d72ce;
+      animation: animate 2s linear infinite;
+  }
+
+  @keyframes animate {
+
+      25%,
+      75% {
+          color: rgb(230, 229, 244);
+      }
+  }
+
+  .protect:hover {
+      width: 90vw;
+      height: 17vh;
+  }
+
+  .box:hover {
+      /* background-color: rgba(246, 245, 245, 0.3); */
+      border-radius: 100px;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(158, 145, 245, 0.9)
+  }
+
+  .protect:hover span {
+      opacity: 1;
+  }
+  #footerl {
+      background-color: none;
+       /* background-color: aquamarine; */
+       grid-area: footerl;
+       color: #fff;
+       text-align: left;
+       padding-left: 1rem;
+       }
+   #footerr {
+       background-color: none;
+       grid-area: footerr;
+       color: #fff;
+       text-align: right;
+       padding-right: 1rem;
+   }
+}

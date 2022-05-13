@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: black;
+    font-family: "Verdana";
+    margin-right: 3rem;
+    margin-left: 3rem;
+    color: #fff;
+}
+
+:root {
+    --main-radius: 1rem;
+    /* 圆角 */
+}
+.container {
+    display: grid;
+    height: 98vh;
+    grid-template-columns: 12rem 0.5fr 0.5fr ;
+    grid-template-rows: 0.12fr 1fr 1fr 0.1fr;
+    grid-template-areas: "side_bar nav nav"
+        "side_bar content1 content2 "
+        "side_bar content1 content3"
+        "side_bar footerl footerr";
+    grid-gap: 1rem;
+    /* font-weight: 800; */
+    /* font-size: 2rem; 删掉 */
+
+}
+
+
+nav {
+    background-color: none;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    text-align: center;
+    font: 800 30px 'Verdana';
+    color: #fff;
+    padding:10px;
+}
+
+.side_bar {
+    grid-area: side_bar;
+    border-radius: var(--main-radius);
+}
+
+.protect {
+    width: 100px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* transparent */
+    background-color: none;
+    transition: 0.5s;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 69px;
+    z-index: 10;
+}
+
+.box {
+    text-decoration: none;
+    /* display: block; */
+    /* 高度 */
+    height: 15%;
+    width: 95%;
+    border-radius: 20px;
+    /* position: relative; */
+    transition: 0.5s;
+    /* 改颜色 */
+    color: #6d72ce;
+}
+
+.box ion-icon {
+    font-size: 60px;
+    position: absolute;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.box span {
+    position: relative;
+    top: 2rem;
+    left: 5.5rem;
+    font: 500 22px 'Verdana';
+    opacity: 0;
+}
+
+/* 闪 */
+#start {
+    color: #6d72ce;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+
+    25%,
+    75% {
+        color: rgb(230, 229, 244);
+    }
+}
+
+.protect:hover {
+    width: 210px;
+}
+
+.box:hover {
+    /* background-color: rgba(246, 245, 245, 0.3); */
+    border-radius: 100px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(158, 145, 245, 0.9)
+}
+
+.protect:hover span {
+    opacity: 1;
+}
+
+
+
+/* ----------------------------------------------------------- */
+/* .text {} */
+
+
+/*选择container下的子元素*/
+.card {
+    /* background: rgba(255, 230, 255, 10); */
+    background: linear-gradient(to right bottom,rgba(230,230,255,0.2),rgba(230, 230, 255, 0.1),rgba(230,230, 255, 0.05));
+    backdrop-filter:blur(12px);
+    border-radius: var(--main-radius);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* display: flow-root; */
+    /* display: inline-block; */
+    /* display: inline; */
+
+
+
+}
+#chat{
+    /* left-padding: 3rem; */
+    position: absolute;
+    padding-left: 2rem;
+    width: 34rem;
+    height: 34rem;
+}
+
+
+#content1 {
+    /* background-color: aliceblue; */
+    grid-area: content1;
+    padding-top: 1rem;
+}
+
+#content2 {
+    grid-area: content2;
+    padding-top: 4rem;
+}
+
+#content3 {
+    grid-area: content3;
+    padding-top: 4rem;
+}
+
+#startlockdown{
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #969aed;
+    font-family: "Verdana";
+    font-weight: 600;
+
+}
+
+
+
+
+
+#footerl {
+   background-color: none;
+    /* background-color: aquamarine; */
+    grid-area: footerl;
+    color: rgba(159, 158, 208, 0.597);
+    text-align: left;
+    }
+#footerr {
+    background-color: none;
+    grid-area: footerr;
+    color: rgba(159, 158, 208, 0.597);
+    text-align: right;
+padding-right: 0.5rem;
+}
+
+
+
+/* 断点 phone */
+@media only screen and (max-width:50rem) {
+    body {
+        background-color: black;
+        font-family: "Verdana";
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+    .container {
+        display: grid;
+        height: 80em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.6fr 0.4fr 0.4fr 0.1fr;
+
+        grid-template-areas: "nav nav"
+            "side_bar side_bar"
+            "content1 content1 "
+            "content2 content2 "
+            "content3 content3"
+            "footerl footerr";
+        grid-gap: 1rem;
+        font-weight: 400;
+        /* font-size: 1rem; 删掉 */
+        text-align: center;
+    }
+
+    /* #chat{
+
+    } */
+
+    .side_bar {
+        grid-area: side_bar;
+        border-radius: var(--main-radius);
+    }
+
+
+    .protect {
+        width: 90vw;
+        height: 10vh;
+        display: flex;
+        /* flex-direction: column;
+        align-items: center; */
+        flex-direction: row;
+        justify-content: center;
+        /* transparent */
+        background-color: none;
+        transition: 0.5s;
+        overflow: hidden;
+        position: absolute;
+        /* left: 100px; */
+        z-index: 10;
+    }
+
+    .box {
+        text-decoration: none;
+        display: block;
+        /* 高度 */
+        height: 95%;
+        width: 15%;
+        border-radius: 20px;
+        /* position: relative; */
+        transition: 0.5s;
+        /* 改颜色 */
+        color: #6d72ce;
+    }
+
+
+    .box ion-icon {
+        font-size: 40px;
+        position: absolute;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    .box span {
+        position: relative;
+        top: 4rem;
+        left: 0.5rem;
+        font: 500 18px 'Verdana';
+        opacity: 0;
+    }
+
+    /* 闪 */
+    #start {
+        color: #6d72ce;
+        animation: animate 2s linear infinite;
+    }
+
+    @keyframes animate {
+
+        25%,
+        75% {
+            color: rgb(230, 229, 244);
+        }
+    }
+
+    .protect:hover {
+        width: 90vw;
+        height: 17vh;
+    }
+
+    .box:hover {
+        /* background-color: rgba(246, 245, 245, 0.3); */
+        border-radius: 100px;
+        color: #fff;
+        text-shadow: 2px 2px 5px rgba(158, 145, 245, 0.9)
+    }
+
+    .protect:hover span {
+        opacity: 1;
+    }
+    #footerl {
+        background-color: none;
+         /* background-color: aquamarine; */
+         grid-area: footerl;
+         color: rgba(159, 158, 208, 0.597);
+         text-align: left;
+         padding-left: 1rem;
+         }
+     #footerr {
+         background-color: none;
+         grid-area: footerr;
+         color: rgba(159, 158, 208, 0.597);
+         text-align: right;
+         padding-right: 1rem;
+     }
+}

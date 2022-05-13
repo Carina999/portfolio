@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    font-family: "Verdana";
+    margin-right: 3rem;
+
+    font-size: 1.5rem;
+}
+
+
+:root {
+    --main-radius: 1rem;
+    /* 圆角 */
+}
+
+.container {
+    display: grid;
+    height: 98vh;
+    grid-template-columns: 12rem 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.1fr;
+    grid-template-areas:
+        "side_bar nav nav nav"
+        "side_bar content1 content2 content3"
+        "side_bar footerl footerl  footerr";
+    grid-gap: 1.5rem;
+    /* font-weight: 800; */
+    /* font-size: 2rem; 删掉 */
+
+}
+
+nav {
+    background-color: none;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    text-align: center;
+    font: 800 30px 'Verdana';
+    color: #fff;
+    padding: 10px;
+}
+
+.side_bar {
+    grid-area: side_bar;
+    border-radius: var(--main-radius);
+}
+
+.protect {
+    width: 100px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* transparent */
+    background-color: none;
+    transition: 0.5s;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 69px;
+    z-index: 10;
+}
+
+.box {
+    text-decoration: none;
+    /* display: block; */
+    /* 高度 */
+    height: 15%;
+    width: 95%;
+    border-radius: 20px;
+    /* position: relative; */
+    transition: 0.5s;
+    /* 改颜色 */
+    color: #6d72ce;
+}
+
+.box ion-icon {
+    font-size: 60px;
+    position: absolute;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.box span {
+    position: relative;
+    top: 2rem;
+    left: 5.5rem;
+    font: 500 22px 'Verdana';
+    opacity: 0;
+}
+
+/* 闪 */
+#share {
+    color: #6d72ce;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+
+    25%,
+    75% {
+        color: rgb(230, 229, 244);
+    }
+}
+
+.protect:hover {
+    width: 210px;
+}
+
+.box:hover {
+    /* background-color: rgba(246, 245, 245, 0.3); */
+    border-radius: 100px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(158, 145, 245, 0.9)
+}
+
+.protect:hover span {
+    opacity: 1;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------- */
+/* .text {} */
+
+/*选择container下的子元素*/
+.card {
+    border-radius: var(--main-radius);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to right bottom,rgba(230,230,255,0.6),rgba(230, 230, 255, 0.4),rgba(230,230, 255, 0.2));
+
+    /* padding-top: 3rem; */
+}
+
+
+#content1 {
+    padding: 3rem;
+    /* background-color: aliceblue; */
+    grid-area: content1;
+}
+.formm{
+    position: absolute;
+    top:18rem;
+    left: 16.5rem;
+}
+.formm2{
+    position: absolute;
+    top:18rem;
+    left: 63rem;
+}
+#mic{
+    font-size: 5rem;
+    position: absolute;
+    top:18rem;
+    left: 45.5rem;
+    color: rgb(182, 159, 237);
+
+}
+.same {
+    color: rgb(182, 159, 237);
+}
+
+
+
+
+#content2 {
+    padding: 3rem;
+    grid-area: content2;
+}
+
+#content3 {
+    padding: 3rem;
+    grid-area: content3;
+}
+
+
+#footerl {
+    background-color: none;
+    /* background-color: aquamarine; */
+    grid-area: footerl;
+    color: rgba(159, 158, 208, 0.597);
+    text-align: left;
+    padding-top: 0.8rem;
+    /* padding-left: 1.3rem; */
+    color: rgba(159, 158, 208, 0.3);
+    font-size: 1rem;
+}
+
+#footerr {
+    background-color: none;
+    /* background-color: aquamarine; */
+    grid-area: footerr;
+    color: rgba(159, 158, 208, 0.597);
+    text-align: right;
+    padding-top: 0.8rem;
+    color: rgba(159, 158, 208, 0.3);
+    /* padding-right: 1rem; */
+    font-size: 1rem;
+}
+
+
+/* 断点 phone */
+@media only screen and (max-width:50rem) {
+    body {
+        background-color: black;
+        font-family: "Verdana";
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .container {
+        display: grid;
+        height: 80em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.03fr 0.05fr 0.4fr 0.4fr 0.4fr 0.1fr;
+
+        grid-template-areas: "nav nav"
+            "side_bar side_bar"
+            "content1 content1"
+            "content2 content2"
+            "content3 content3"
+            "footerl footerr";
+        grid-gap: 2.5rem;
+        font-weight: 400;
+        /* font-size: 1rem; 删掉 */
+        text-align: center;
+    }
+
+    nav {
+        background-color: none;
+        grid-area: nav;
+        border-radius: var(--main-radius);
+        text-align: center;
+        font: 800 30px 'Verdana';
+        color: #fff;
+        padding: 10px;
+    }
+
+    .side_bar {
+        grid-area: side_bar;
+    }
+
+    .protect {
+        width: 95vw;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        /* transparent */
+        background-color: none;
+        transition: 0.5s;
+        overflow: hidden;
+        position: absolute;
+        top: 60px;
+        z-index: 10;
+    }
+
+    .box {
+        text-decoration: none;
+        display: block;
+        /* 高度 */
+        height: 99%;
+        width: 15%;
+        border-radius: 20px;
+        /* position: relative; */
+        transition: 0.5s;
+        /* 改颜色 */
+        color: #6d72ce;
+    }
+
+    .box ion-icon {
+        font-size: 40px;
+        /* position: absolute; */
+        /* padding-left: 1rem; */
+    }
+
+    .box span {
+        position: relative;
+        top: 4rem;
+        left: 0.5rem;
+        font: 500 18px 'Verdana';
+        opacity: 0;
+    }
+
+    /* 闪 */
+    #share {
+        color: #6d72ce;
+        animation: animate 2s linear infinite;
+    }
+
+    @keyframes animate {
+
+        25%,
+        75% {
+            color: rgb(230, 229, 244);
+        }
+    }
+
+    .protect:hover {
+        width: 95vw;
+        height: 17vh;
+    }
+
+    .box:hover {
+        /* background-color: rgba(246, 245, 245, 0.3); */
+        border-radius: 100px;
+        color: #fff;
+        text-shadow: 2px 2px 5px rgba(158, 145, 245, 0.9)
+    }
+
+    .protect:hover span {
+        opacity: 1;
+    }
+
+
+    /*选择container下的子元素*/
+    .card {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border-radius: var(--main-radius);
+        /* padding-top: 3rem; */
+    }
+
+
+    #content1 {
+        /* background-color: aliceblue; */
+        grid-area: content1;
+    }
+
+    #content2 {
+        grid-area: content2;
+    }
+
+    #content3 {
+        grid-area: content3;
+    }
+
+    #footerl {
+        background-color: none;
+        /* background-color: aquamarine; */
+        grid-area: footerl;
+        color: rgba(159, 158, 208, 0.3);
+        text-align: left;
+        padding-left: 0rem;
+    }
+
+    #footerr {
+        background-color: none;
+        grid-area: footerr;
+        color: rgba(159, 158, 208, 0.3);
+        text-align: right;
+        /* padding-right: 1rem; */
+    }
+}

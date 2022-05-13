@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <script src="js/p5.js"></script> -->
+    <!-- <script src="js/p5.sound.js"></script> -->
+    <link rel="stylesheet" href="css/share.css">
+    <title>Share</title>
+    <link rel="icon" href="pics/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav_bar">Share your story
+        </nav>
+
+        <div class="side_bar">
+            <div class="protect">
+                <!-- logo -->
+                <!-- <a class="box" href="start.html"> -->
+                    <a class="box" href="two.html">
+                    <ion-icon id="start" name="home-outline"></ion-icon><span>Start</span>
+                </a>
+                <a class="box" href="share.html">
+                    <ion-icon id="share" name="share-social-outline"></ion-icon><span>Share</span>
+                </a>
+                <a class="box" href="diary.html">
+                    <ion-icon id="diary" name="document-text-outline"></ion-icon><span>Diary</span>
+                </a>
+                <a class="box" href="purpose.html">
+                    <ion-icon id="purpose" name="star-outline"></ion-icon><span>Purpose</span>
+                </a>
+                <a class="box" href="artists.html">
+                    <ion-icon id="artists" name="people-outline"></ion-icon><span>Artists</span>
+                </a>
+                <a class="box" href="advice.html">
+                    <ion-icon id="advice" name="planet-outline"></ion-icon><span>Advice</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="content1" class="card">
+            <div>
+
+                Share your story to enrich the shared memory
+            </div>
+            <br>
+            <div class="formm">
+                <form name="form2" action="mailto:fyy0528@sina.com" method="post" enctype="text/plain">
+                    <textarea name="content" rows="6" cols="37"
+                        onpropertychange="if(this.scrollHeight>80) this.style.posHeight=this.scrollHeight+5">Type here</textarea>
+            </div>
+        </div>
+        <div id="content2" class="card"><span class="same">Record your story</span>
+            <div id="mic">
+                <ion-icon name="mic-outline"></ion-icon>
+            </div>
+        </div>
+
+        <div id="content3" class="card">
+            <div>
+                Leave your comments here
+            </div>
+            <br>
+            <div class="formm2">
+                <form name="form2" action="mailto:fyy0528@sina.com" method="post" enctype="text/plain">
+
+                    <textarea name="content" rows="6" cols="37"
+                        onpropertychange="if(this.scrollHeight>80) this.style.posHeight=this.scrollHeight+5">Type here</textarea>
+            </div>
+        </div>
+
+        <div id="footerl"><span class="left">Interaction Lab</span></div>
+        <div id="footerr"><span class="right">Tony & Carina</span></footer>
+        </div>
+    </div>
+    <button id="top">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>

@@ -1,0 +1,201 @@
+body {
+    background-color: black;
+    font-family: "Verdana";
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+#top {
+  
+    /* display: none; Hidden by default */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 2rem; /* Place the button at the bottom of the page */
+    right: 2rem; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    background-color: rgba(190, 190, 250,100);
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 0.5rem;
+    border: none;
+    border-radius: 50%; /* Rounded corners */
+    /* font-size: 18px; Increase font size */
+  }
+
+  #top:hover {
+    background-color: rgb(133, 155, 227); /* Add a dark-grey background on hover */
+  }
+
+#arrow_top{
+
+font-size: 2rem;
+}
+
+.container {
+    display: grid;
+    height: 80em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.03fr 0.05fr 1.2fr 0.4fr 0.4fr 0.1fr;
+
+    grid-template-areas: "nav nav"
+        "side_bar side_bar"
+        "content1 content2"
+        "content3 content3"
+        "content3 content3"
+        "footerl footerr";
+    grid-gap: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+nav {
+    background-color: none;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    text-align: center;
+    font: 800 30px 'Verdana';
+    color: #fff;
+    padding: 10px;
+}
+
+.side_bar {
+    grid-area: side_bar;
+}
+
+.protect {
+    width: 95vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* transparent */
+    background-color: none;
+    transition: 0.5s;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+    z-index: 10;
+}
+
+.box {
+    text-decoration: none;
+    display: block;
+    /* 高度 */
+    height: 99%;
+    width: 15%;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.5s;
+    /* 改颜色 */
+    color: #6d72ce;
+}
+
+.box ion-icon {
+    font-size: 40px;
+    position: absolute;
+    padding-top: 1rem;
+}
+
+.box span {
+    position: relative;
+    top: 4rem;
+    left: -0.2rem;
+    font: 500 18px 'Verdana';
+    opacity: 0;
+}
+
+/* 闪 */
+#start {
+    color: #6d72ce;
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+
+    25%,
+    75% {
+        color: rgb(230, 229, 244);
+    }
+}
+
+.protect:hover {
+    width: 95vw;
+    height: 17vh;
+}
+
+.box:hover {
+    /* background-color: rgba(246, 245, 245, 0.3); */
+    border-radius: 100px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(158, 145, 245, 0.9)
+}
+
+.protect:hover span {
+    opacity: 1;
+}
+
+.card {
+    /* background-color: pink; */
+    border-radius: var(--main-radius);
+}
+
+/*选择container下的子元素*/
+.card {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    /* padding-top: 3rem; */
+}
+.same {
+    color: blueviolet;
+}
+#learning{
+    /* left-padding: 3rem; */
+    position: absolute;
+    padding-left: 2rem;
+    width: 34rem;
+    height: 34rem;
+    visibility:visible;
+}
+#sleep{
+    /* left-padding: 3rem; */
+    position: absolute;
+    /* padding-left: 2rem; */
+    padding-top: 3rem;
+    width: 34rem;
+    height: 34rem;
+    visibility: hidden;
+}
+
+#content1 {
+    /* background-color: aliceblue; */
+    grid-area: content1;
+}
+
+#content2 {
+    grid-area: content2;
+}
+
+#content3 {
+    grid-area: content3;
+}
+
+#footerl {
+    background-color: none;
+    /* background-color: aquamarine; */
+    grid-area: footerl;
+    color: rgba(159, 158, 208, 0.597);
+    text-align: left;
+    padding-left: 0rem;
+}
+
+#footerr {
+    background-color: none;
+    grid-area: footerr;
+    color: rgba(159, 158, 208, 0.597);
+    text-align: right;
+    /* padding-right: 1rem; */
+}
