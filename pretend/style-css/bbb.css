@@ -1,0 +1,148 @@
+/* .caca{
+float:left;
+width: 80%
+} */
+#ca{
+  /* background-color: #ccc;
+  padding:30px; */
+text-align: center;
+width:800px;
+margin:0 auto;
+
+  /* position :relative; */
+  /* position:fixed;
+
+  right: 200px; */
+}
+p{
+  text-align: justify;
+}
+
+h1{
+  background-color: #ccc;
+  padding:30px;
+  text-align: center;
+}
+
+.col{
+
+  display: inline-block;
+  width:30%;
+}
+
+.str{
+  color: pink;
+}
+
+
+.list li:nth-child(even) {
+  background-color: pink;
+  /* list-style-image: url('../img/check.png'); */
+  /* list-style-type: disc; */
+  list-style: square;
+}
+.list li:last-child{
+  background-color: skyblue;
+}
+.list li:nth-child(3){
+  background-color: purple;
+}
+
+
+#xia{
+  background-color: green;
+  color: white;
+  padding: 20px 20px; //高 宽
+}
+#xia:hover{
+  background-color: pink;
+}
+#xia:active{
+  background-color: black;
+  padding: 10px 10px;
+}
+
+
+.block{
+  /* display: none; */
+  /* The element does not appear and takes up no space */
+
+  /* visibility: hidden; */
+  /* The element is invisible but still takes up space */
+
+  /* display: inline-block; */
+  /* 靠左的三个框 */
+
+  /* float: none; */
+  float: right;
+  width:30.3%;
+  /* 33.3% 不行*/
+  border: 2px blue solid;
+  /* box-sizing: content-box; 不可以*/
+  box-sizing: border-box;
+
+  margin: 20px;
+}
+
+#main{
+  float: left;
+  width: 70%;
+  border: 3px green solid;
+  box-sizing: border-box;
+}
+#sidebar{
+  float: right;
+  width:30%;
+  border: 5px pink solid;
+  box-sizing: border-box;
+}
+.clearfix{
+  clear:both;
+}
+
+.box{
+  border: 5px dotted skyblue;
+  border-radius: 50px;
+  padding:20px;
+  background-color: pink;
+  /* padding:pink; */
+  margin:20px 0;
+
+position: relative;
+left:30px;
+top:100px;
+}
+.box p{
+  background-color: yellow;
+  /* radius: 50px; ?????改变radius */
+}
+.position-box{
+  width:500px;
+  height:500px;
+  border:10px black dotted;
+  position:relative;
+  /* 很重要！！！不写的话框框里的字在左上角 */
+}
+.position-box h1{
+  position: absolute;
+  top:100px;
+  left:100px;
+}
+
+.position-box h2{
+  position: absolute;
+  top:200px;
+  left:200px;
+}
+
+
+#fixleft{
+  position: fixed;
+  left:0;
+  bottom:0;
+}
+.bai-fen-hao {
+position: fixed;
+right: 30%;
+top: 20%;
+}
