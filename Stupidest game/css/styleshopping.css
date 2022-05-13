@@ -1,0 +1,239 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#homepage{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 50px;
+  color: rgba(50,110,160,1)
+}
+
+.posi{
+  /* background: white; */
+  position: relative;
+  left: 55px;
+  border-radius: 15px;
+  min-width: 80%;
+  min-height: 550px;
+
+}
+
+.glass{
+  background: linear-gradient(to right bottom,rgba(230,230,255,0.6),rgba(230, 230, 255, 0.4),rgba(230,230, 255, 0.2));
+  backdrop-filter:blur(12px);
+  position: relative;
+  min-height: 550px;
+  border-radius: 15px;
+  border-top: solid 1.3px rgba(230,230,255,0.72);
+  border-left: solid 1.3px rgba(230,230,255,0.72);
+  box-shadow:3px 15px 50px rgb(20,20,20,0.25);
+
+}
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  background: linear-gradient(25deg, rgba(204,124,197,0.4718) 0%, rgba(202,163,217,1) 16%, rgba(161,153,215,0.8) 46%, rgba(114,176,225,0.9) 100%);
+   min-height: 100vh;
+   min-width: 100vh;
+}
+
+/* 紫 */
+.ha{
+  position: absolute;
+  top:-40px;
+  right:-60px;
+  z-index: -10;
+  width:180px;
+  height: 180px;
+  background:#9B72AA;
+  border-radius: 100%;
+
+}
+/* 蓝 */
+.hu{
+  position: absolute;
+  top:460px;
+  left:-56px;
+  z-index: -10;
+  width:129px;
+  height: 129px;
+  background: #3E56AB ;
+  border-radius: 100%;
+
+}
+#bb{
+z-index: 1000;
+font-size: 10px;
+font-family: "Verdana";
+color: rgb(39, 64, 139);
+text-shadow: lightblue 1.5px 0 1.5px;
+}
+#buttonposi{
+  position: absolute;
+  left:130px;
+  top:313px;
+  width:200px;
+  height:100px;
+  padding: 20px;
+}
+
+#buttonposi2{
+  position: absolute;
+  left:130px;
+  top:313px;
+  width:200px;
+  height:100px;
+  padding: 20px;
+}
+
+#buttonposi #purpur{
+  position: absolute;
+  padding: 2px;
+  left:65px;
+  top:42px;
+  background-color:white;
+  border: 1px solid rgb(28, 134, 238);
+  border-radius: 6px;
+}
+
+#buttonposi2 #purpur{
+  position: absolute;
+  padding: 2px;
+  left:65px;
+  top:42px;
+  background-color:white;
+  border: 1px solid rgb(28, 134, 238);
+  border-radius: 6px;
+}
+
+#purpur:hover {
+ background-color: pink;
+}
+#one button {
+  z-index: 100;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  transition-duration: 0.1s;
+}
+
+#cancel1{
+  position: absolute;
+  top:330px;
+  left:20px;
+  background-color:skyblue;
+  border: 1px solid rgb(58, 95, 205);
+  border-radius: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#cancel:hover {
+ background-color: white;
+
+}
+
+#cancel2{
+  position: absolute;
+  top:330px;
+  left:20px;
+  background-color:skyblue;
+  border: 1px solid rgb(58, 95, 205);
+  border-radius: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#cancel2:hover {
+ background-color: white;
+
+}
+#cancelword{
+  font-size:35px;
+  color: rgb(39, 64, 139);
+}
+/* card1 */
+.glass #one{
+visibility: visible;
+  position: absolute;
+  left: 5%;
+  top:100px;
+  width:300px;
+  height: 400px;
+  background: rgba(230,230,255,0.78);
+  border-top: solid 1.3px rgba(230,230,255,0.8);
+  border-left: solid 1.3px rgba(230,230,255,0.8);
+  box-shadow:3px 10px 23px rgb(20,20,20,0.2);
+  border-radius: 15px;
+}
+.glass #two{
+  visibility: visible;
+  position: absolute;
+  left: 36.5%;
+  top:100px;
+  width:300px;
+  height: 400px;
+  background: rgba(230,230,255,0.78);
+  border-top: solid 1.3px rgba(230,230,255,0.8);
+  border-left: solid 1.3px rgba(230,230,255,0.8);
+  box-shadow:3px 10px 23px rgb(20,20,20,0.2);
+  border-radius: 15px;
+}
+.glass #three{
+  position: absolute;
+  left: 68%;
+  top:100px;
+  width:300px;
+  height: 400px;
+  background: rgba(230,230,255,0.78);
+  border-top: solid 1.3px rgba(230,230,255,0.8);
+  border-left: solid 1.3px rgba(230,230,255,0.8);
+  box-shadow:3px 10px 23px rgb(20,20,20,0.2);
+  border-radius: 15px;
+}
+
+.glass h1{
+  display: flex;
+  justify-content: center;
+  font:900 50px "Verdana";
+  letter-spacing:3px;
+  color: rgb(19, 44, 119);
+}
+
+
+#one #freeze{
+  color: rgb(19, 44, 119);
+  display: flex;
+  justify-content: center;
+  font:900 26px "Verdana";
+}
+#two #extra{
+  color: rgb(19, 44, 119);
+  display: flex;
+  justify-content: center;
+  font:900 26px "Verdana";
+}
+
+#one #desf{
+  color: rgb(19, 44, 119);
+  margin-left: 20px;
+  position: absolute;
+  top:100px;
+  font:550 20px "Verdana";
+}
+
+#dese{
+  color: rgb(19, 44, 119);
+  margin-left: 20px;
+  position: absolute;
+  top:100px;
+  font:550 20px "Verdana";
+}
